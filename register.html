@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Job Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body onload="checkAuthStatus()">
+
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="text-decoration: none;">JobPortal</a>
+        <div class="menu" id="nav-menu"></div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Create an Account</h2>
+            <form onsubmit="register(event)">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <select id="role" required>
+                    <option value="" disabled selected>Select Role</option>
+                    <option value="seeker">Job Seeker</option>
+                    <option value="employer">Employer</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                Already have an account? <a href="login.html" style="color: var(--primary);">Login here</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
